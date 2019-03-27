@@ -1,6 +1,12 @@
 <?php
 
 
+
+
+
+
+
+
 function store_user_info($username) {
     $_SESSION['username'] = $username;
 }

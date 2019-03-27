@@ -1,0 +1,48 @@
+body,html{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.danger{
+    border:1px solid red;
+}
+.transition{
+    display: none;
+    transition-property: display;
+    transition-duration: 3s;
+    transition-timing-function: ease-out;
+}
+main{
+    background:mediumseagreen;
+    padding: 10px;
+}
+.add{
+    background: rgb(44, 114, 44);
+    border: none;
+    color:white;
+    padding: 3px;
+    cursor: pointer;
+}
+ul{
+    padding: 0px;
+    margin:5px;
+}
+li{
+    background:white;
+    list-style: none;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    transition: display 3s ease-out;
+}
+.btn{
+    background: red;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px 1px gray;
+    outline: none;
+    border:none;
+}

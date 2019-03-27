@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    background-color: yellow;
+    width: 100%;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, calc(100vh / 3) );
+    grid-template-areas: 
+        "header header header"
+        "menu section section"
+        "aside aside footer";
+}
+.grid-container > .one {
+    grid-area: header;
+    background-color: orange;
+}
+.grid-container > .third {
+    grid-area: section;
+    background-color: green;
+}
+.grid-container > .four {
+    grid-area: aside;
+    background-color: lavender;
+}
+.grid-container > div {
+    background-color: blue;
+}

@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    justify-content: center;
+    background: linear-gradient(90deg, orchid, dodgerblue);
+}
+
+h1, h2, h3 {
+    font-family: 'Abril FatFace', serif;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 200px minmax(200px, 600px) minmax(400px, 800px);
+    grid-template-rows: 100vh;
+    background: linear-gradient(135deg, rgba(255,255,255,.8), rgba(200,200,200,.8));
+}
+
+.grid-container > aside {
+    background-color: #eee;
+    min-height: 100vh;
+}
+.grid-container > aside img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    /* border: solid 2px black; */
+    border-radius: 50%;
+}
+
+.grid-container > aside + section {
+    padding: 15px 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: transparent;
+}
+
+.grid-container > .chat-box {
+    background: indianred;
+}
+
+aside ul {
+    background: transparent;
+    padding: 0;
+}
+
+aside ul > li {
+    display: block;
+    height: 50px;
+    background: transparent;
+    line-height: 50px;
+    font-family: 'Overpass', sans-serif;
+    padding: 0 30px;
+}
+
+.chat-box {
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    margin: 15px 0;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    transition: all .3s ease-in;
+}
+
+.chat-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px 2px rgba(0,0,0,0.37)
+}
+.chat-box .chat-image {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.chat-box .chat-image img {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat-box > article {
+    flex: 1 1;
+    align-self: stretch;
+}
+.chat-box > div {
+    align-self: start;
+    font-size: smaller;
+    opacity: .4;
+}
+
+.chat-box article h4 {
+   margin: 0;
+    font-size: .9em;
+}
+
+.chat-box article p {
+    font-size: smaller;
+    margin: 0;
+}
+
+.chat-area {
+    background-color: transparent;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.chat-bubble {
+    display: inline-block;
+    min-width: 300px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-bubble .chat-bubble-image {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    object-fit: cover;
+    /* border: solid 1px black; */
+    margin-right: 10px;
+}
+
+.chat-bubble .bubble {
+    background: white;
+    font-family: 'Overpass', sans-serif;
+    padding: 0 15px;
+    line-height: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+.chat-bubble.recipient-chat {
+    justify-content: flex-end;
+}
+
+.chat-bubble.recipient-chat .chat-bubble-image {
+    order: 2;
+    margin-left: 15px;
+}
+
+
+.chat-form {
+    margin-top: 30px;
+/*     background: yellow; */
+    padding: 5px;
+    box-sizing: border-box;
+/*     border: solid 2px black; */
+}
+
+.input-field {
+    background: white;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    align-items: center;
+    height: 50px;
+    display: flex;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+.input-field > * {
+    margin: 5px;
+}
+
+.input-field .emoji {
+    width: 30px;
+    background-color: orange;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.input-field input {
+    width: 100%;
+    font-size: 1.2em;
+    flex: 1;
+    color: #555;
+    border: none;
+    align-self: stretch;
+}
+
+.input-field .attachment {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 30px;
+}
+
+.input-field .send-button {
+    width: 40px;
+    border: solid 2px white;
+    height: 40px;
+    background: linear-gradient(135deg, lightblue, dodgerblue);
+    border-radius: 30px;
+    box-shadow: -5px 8px 9px #1e90ff99;
+}

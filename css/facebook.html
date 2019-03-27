@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<style>
+    .liked{
+        color:lightblue;
+    }
+    html,body{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        background:mediumaquamarine;
+        padding: 50px;
+       
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="like">
+            <i class="fa fa-thumbs-up fa-3x"></i>
+        </div>
+        <div class="love">
+            <i class="fa fa-heart fa-3x"></i>
+        </div>
+    </div>
+</body>
+<script>
+    var like = document.getElementsByClassName('fa-thumbs-up')[0];
+    like.addEventListener('click',function(){
+        like.classList.toggle('liked');
+    });
+</script>
+</html>

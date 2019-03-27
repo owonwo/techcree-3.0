@@ -1,0 +1,110 @@
+
+.card {
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    overflow: hidden;
+    flex: 1;
+    border-radius: 12px;
+    margin: 5px;
+}
+
+.card .card-header ,
+.card .card-body {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.card-header {
+/*     background-color: orchid; */
+    height: 50px;
+    display: flex;
+    border-bottom: solid 2px #eee;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+/*     background-color: yellow; */
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.card .card-header .circle-icon {
+    border: solid 1px transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px;
+    box-shadow: 0 0 3px transparent;
+    display: inline-block;
+    transition-duration: .3s;
+}
+
+.card .card-header .circle-icon:hover {
+    border-color: dodgerblue;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.fancy-chart {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 2px dodgerblue;
+    border-radius: 25px;
+    border-top-color: transparent;
+    animation: rotate 1s infinite ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        border-color: orange;
+        border-top-color: transparent;
+        transform: rotateY(0deg) rotateX(90deg);
+    }
+    
+    
+    100% {
+        transform: rotateX(0deg) rotateY(190deg);
+    }
+}
+
+
+.flat-card {
+    background: white;
+    width: 350px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    display:   flex;
+}
+
+.flat-card .image-holder {
+    width: 150px;
+    height: 150px;
+    background: yellow;
+}
+
+.flat-card .content {
+    padding: 5px 15px;
+    display: flex;
+    font-size: smaller;
+    color: #666;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flat-card .image-holder img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.flat-card .content h3 {
+    margin: 0;
+}
+
+

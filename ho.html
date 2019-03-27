@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <main>
+        <input type="text" id="todo" value="" onblur="todoList()" required>
+        <button onclick="todoList()" class="add">Add Item</button>
+        <ul id="fish" class="todoList">
+           
+        </ul>
+    </main>
+</body>
+<script>
+    function todoList(){
+        var input = document.getElementById("todo");
+        var container = document.getElementById("fish");
+       if(input.value == ""){
+           input.classList.add('danger');
+       }else{
+           input.classList.remove('danger');
+        var newListTag = document.createElement("li");
+        newListTag.innerHTML = input.value;
+        container.appendChild(newListTag);
+        var button = document.createElement("button");
+        button.classList.add("btn");
+        button.innerHTML = "X";
+        input.value = "";
+        newListTag.appendChild(button);
+       
+        var buttons = document.querySelectorAll(".btn");
+        buttons.forEach(function(btn){
+            btn.addEventListener("click",function(){
+                var list = btn.parentElement;
+                list.classList.add('transition');
+                // list.style.display = "none";
+                // list.style.transition = "all 3s ease-out 3s";
+            });
+        });
+       }
+    }
+</script>
+</html>

@@ -1,8 +1,11 @@
 <?php
     session_start();
 
+    @include('inc/connection.php');
     @include('inc/functions.php');
 
+    die();
+    
     //retrieve username and password from $_POST array;
     $username = $_POST['username'];
     $password = $_POST['password']; 
